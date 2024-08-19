@@ -1,0 +1,45 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.8.3/schema.json",
+	"files": {
+		"ignore": ["public", ".next", "node_modules"]
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"javascript": {
+		"globals": ["React"]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"all": true,
+			"nursery": {
+				"all": true,
+				"noUndeclaredDependencies": "off",
+				"noReactSpecificProps": "off",
+				"useSortedClasses": "warn"
+			}
+		}
+	},
+	"overrides": [
+		{
+			"include": [
+				"error.tsx",
+				"layout.tsx",
+				"loading.tsx",
+				"not-found.tsx",
+				"page.tsx",
+				"template.tsx",
+				"next.config.mjs",
+				"tailwind.config.ts"
+			],
+			"linter": {
+				"rules": {
+					"style": {
+						"noDefaultExport": "off"
+					}
+				}
+			}
+		}
+	]
+}
