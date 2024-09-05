@@ -34,8 +34,16 @@
   "css.validate": false,
   "postcss.validate": false,
   "typescript.tsdk": "./node_modules/typescript/lib",
+  "cSpell.ignorePaths": [
+    "**/pnpm-lock.yaml",
+    "**/node_modules/**",
+    "**/vscode-extension/**",
+    "**/.git/objects/**",
+    ".vscode"
+  ],
   "cSpell.words": [
     "antfu",
     "tailwindcss"
   ]
+
 }
