@@ -1,5 +1,8 @@
 import type { NextConfig } from 'next'
 
 export default {
-  /* config options here */
+  experimental: {
+    ppr: true,
+    dynamicIO: true,
+  },
 } satisfies NextConfig
