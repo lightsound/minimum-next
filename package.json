@@ -10,9 +10,13 @@
     "lint:fix": "eslint . --fix"
   },
   "dependencies": {
+    "clsx": "^2.1.1",
+    "justd-icons": "^1.8.1",
     "next": "canary",
     "react": "canary",
-    "react-dom": "canary"
+    "react-dom": "canary",
+    "react-dropzone": "^14.3.5",
+    "tailwind-merge": "^2.5.4"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.9.2",

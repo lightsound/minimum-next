@@ -3,7 +3,7 @@ import '~/css/globals.css'
 
 export default function RootLayout({ children }: NextLayoutProps) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <body>{children}</body>
     </html>
   )

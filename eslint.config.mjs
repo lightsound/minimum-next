@@ -16,4 +16,5 @@ export default antfu(
   },
   ...compat.extends('plugin:@next/next/core-web-vitals'),
   ...tailwind.configs['flat/recommended'],
+  { settings: { tailwindcss: { callees: ['cn'] } } },
 )

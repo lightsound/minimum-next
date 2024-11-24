@@ -32,7 +32,6 @@
   // Custom settings
   "editor.quickSuggestions": { "strings": true },
   "css.validate": false,
-  "postcss.validate": false,
   "typescript.tsdk": "./node_modules/typescript/lib",
   "cSpell.ignorePaths": [
     "**/pnpm-lock.yaml",
@@ -43,6 +42,7 @@
   ],
   "cSpell.words": [
     "antfu",
+    "justd",
     "tailwindcss"
   ]
 }
