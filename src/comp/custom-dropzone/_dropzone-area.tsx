@@ -7,13 +7,12 @@ import { useFileContext } from './_file-context'
 interface Props {
   children: React.ReactNode
   id: string
-  name: string
+  name?: string
   className?: string
-  activeClassName?: string
   disabled?: boolean
 }
 
-export function DropzoneArea({ children, id, name, className, disabled }: Props) {
+export function DropzoneArea({ children, id, name = 'file', className, disabled }: Props) {
   const { handleSetFileWithPreview } = useFileContext()
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: (acceptedFiles: File[]) => {
