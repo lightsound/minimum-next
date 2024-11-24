@@ -9,11 +9,10 @@ interface Props {
   id: string
   name?: string
   className?: string
-  disabled?: boolean
 }
 
-export function DropzoneArea({ children, id, name = 'file', className, disabled }: Props) {
-  const { handleSetFileWithPreview } = useFileContext()
+export function DropzoneArea({ children, id, name = 'file', className }: Props) {
+  const { handleSetFileWithPreview, disabled } = useFileContext()
   const { getRootProps, getInputProps, isDragActive } = useDropzone({
     onDrop: (acceptedFiles: File[]) => {
       const file = acceptedFiles[0]
