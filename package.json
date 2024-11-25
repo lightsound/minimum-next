@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
@@ -16,7 +16,7 @@
     "react": "canary",
     "react-dom": "canary",
     "react-dropzone": "^14.3.5",
-    "tailwind-merge": "^2.5.4"
+    "tailwind-merge": "^2.5.5"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.9.2",

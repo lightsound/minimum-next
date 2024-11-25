@@ -5,9 +5,8 @@ import React from 'react'
 import { useFormStatus } from 'react-dom'
 import { FileContext, useFileContext } from './_file-context'
 
-export function FileBoundary({ children, previewComponent, disabled }: {
+export function FileBoundary({ children, disabled }: {
   children: React.ReactNode
-  previewComponent: React.ReactNode
   disabled?: boolean
 }) {
   const { pending } = useFormStatus()
@@ -29,9 +28,7 @@ export function FileBoundary({ children, previewComponent, disabled }: {
   return (
     // eslint-disable-next-line react/no-unstable-context-value
     <FileContext.Provider value={{ file, disabled: pending || disabled, handleRemoveFile, handleSetFileWithPreview }}>
-      <div className="size-full data-[disabled=true]:bg-gray-100" data-disabled={pending || disabled}>
-        {file ? previewComponent : children}
-      </div>
+      {children}
     </FileContext.Provider>
   )
 }
@@ -50,12 +47,6 @@ export function FileName() {
 export function RemoveFileButton(props: React.ComponentProps<'button'>) {
   const { handleRemoveFile, disabled } = useFileContext()
   return (
-    <button
-      type="button"
-      aria-label="Remove file"
-      onClick={handleRemoveFile}
-      disabled={disabled}
-      {...props}
-    />
+    <button type="button" aria-label="Remove file" onClick={handleRemoveFile} disabled={disabled} {...props} />
   )
 }
