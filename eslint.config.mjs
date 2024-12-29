@@ -25,4 +25,9 @@ export default antfu(
       'unused-imports/no-unused-vars': ['warn', { vars: 'all', varsIgnorePattern: '^_', args: 'after-used', argsIgnorePattern: '^_' }],
     },
   },
+  {
+    rules: {
+      '@next/next/no-img-element': 'off',
+    },
+  },
 )
