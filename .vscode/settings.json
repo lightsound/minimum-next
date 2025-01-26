@@ -17,5 +17,5 @@
 	"typescript.tsdk": "./node_modules/typescript/lib",
 
 	// cSpell
-	"cSpell.words": ["biomejs"]
+	"cSpell.words": ["biomejs", "Promisable"]
 }

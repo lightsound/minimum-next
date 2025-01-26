@@ -15,15 +15,24 @@
 			"all": true,
 			"nursery": {
 				"all": true,
+				"useExplicitType": "off",
 				"useSortedClasses": {
 					"level": "error",
 					"fix": "safe",
 					"options": {}
 				}
 			},
+			"correctness": {
+				"all": true,
+				"useImportExtensions": "off"
+			},
 			"suspicious": {
 				"all": true,
 				"noReactSpecificProps": "off"
+			},
+			"complexity": {
+				"all": true,
+				"noVoid": "off"
 			}
 		}
 	},
