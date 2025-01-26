@@ -1,0 +1,80 @@
+{
+	"$schema": "https://biomejs.dev/schemas/1.9.4/schema.json",
+	"files": {
+		"ignore": ["public", ".next", "node_modules"]
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"javascript": {
+		"globals": ["React"]
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"all": true,
+			"nursery": {
+				"all": true,
+				"useSortedClasses": {
+					"level": "error",
+					"fix": "safe",
+					"options": {}
+				}
+			},
+			"suspicious": {
+				"all": true,
+				"noReactSpecificProps": "off"
+			}
+		}
+	},
+	"css": {
+		"parser": {
+			"cssModules": true
+		},
+		"linter": {
+			"enabled": true
+		},
+		"formatter": {
+			"enabled": true
+		}
+	},
+	"overrides": [
+		// https://nextjs.org/docs/app/api-reference/file-conventions のファイルでは default export が必須のため
+		{
+			"include": [
+				"default.tsx",
+				"error.tsx",
+				"forbidden.tsx",
+				"instrumentation.ts",
+				"layout.tsx",
+				"loading.tsx",
+				"mdx-components.tsx",
+				"middleware.ts",
+				"not-found.tsx",
+				"page.tsx",
+				"route.ts",
+				"template.tsx",
+				"unauthorized.tsx",
+				"next.config.ts"
+			],
+			"linter": {
+				"rules": {
+					"style": {
+						"noDefaultExport": "off"
+					}
+				}
+			}
+		},
+		// 制約を回避するため
+		{
+			"include": ["next.config.ts"],
+			"linter": {
+				"rules": {
+					"style": {
+						"useNamingConvention": "off"
+					}
+				}
+			}
+		}
+	]
+}

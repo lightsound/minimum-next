@@ -1,10 +1,10 @@
-import type { NextConfig } from 'next'
+import type { NextConfig } from "next";
 
 export default {
-  experimental: {
-    ppr: true,
-    dynamicIO: true,
-    reactCompiler: true,
-    authInterrupts: true,
-  },
-} satisfies NextConfig
+	experimental: {
+		ppr: true,
+		dynamicIO: true,
+		reactCompiler: true,
+		authInterrupts: true,
+	},
+} satisfies NextConfig;
