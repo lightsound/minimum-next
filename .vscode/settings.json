@@ -12,6 +12,10 @@
 
 	// Tailwind CSS
 	"editor.quickSuggestions": { "strings": true },
+
+	// TypeScript
 	"typescript.tsdk": "./node_modules/typescript/lib",
+
+	// cSpell
 	"cSpell.words": ["biomejs"]
 }
