@@ -5,5 +5,6 @@ export default {
     ppr: true,
     dynamicIO: true,
     reactCompiler: true,
+    authInterrupts: true,
   },
 } satisfies NextConfig
